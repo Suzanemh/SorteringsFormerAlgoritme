@@ -18,7 +18,7 @@ Linje 15: lager en integer med navn storstVerdi, setter verdien til 0
 Linje 17-21: Her setter jeg arrayet sin lengde til å være mindre enn 1 med en if setning, hvis det er tilfelle vil feilmelding skrives ut. 
 Deretter en ny else if setning som setter arrayet sin lengde til å være == 1. Hvis det er tilfelle setter vi storstTall til første element i indeks 1. 
 Lager en for løkke med gitte intervaller, deretter en ny if setning med integer temp som bytter på verdi elementene i arrayet. 
-Når elementene har gått seg gjennom for løkken og funnet største tall, setter vi det som lik a[i];
+Når elementene har gått seg gjennom for løkken og funnet største tall, setter vi det som lik a[i]
 Til slutt returnerer vi verdien. 
 
 Linje 35: metode ombyttinger
@@ -28,8 +28,59 @@ Linje 39-46: en if setning som øker med 1 hvis verdiene er gyldige. Deretter by
 
 Spørsmål:
 Når blir det færrest ombytninger? Blir færrest ombytninger når tabellen er sortert
+
 Når blir det flest? Blir flest ombytninger når tabellen er usortert.
-Hvor mange blir det i gjennomsnitt? Finner gjennomsnittet ved å addere tallene i arrayet, deretter dele det på atnall tall. 
+
+Hvor mange blir det i gjennomsnitt?
+
+KODE for å lage gjennomsnittsmetoden
+:
+package no.oslomet.cs.algdat.Oblig1;
+import java.util.Arrays;
+import java.util.Random;
+
+public class MainTest {
+
+    public static int snitt (int n) {
+
+        int antallTester = n;
+        int [] a;
+        int sum = 0;
+        int snitt;
+        for (int i = 0; i < antallTester; i++) {
+            a = randPerm(10);
+            sum += Oblig1.ombyttinger(a);
+        }
+        snitt = sum / antallTester;
+        return snitt;
+    }
+
+    public static void bytt(int[] a, int i, int j) { // Programkode 1.1.8 d
+        int temp = a[i]; a[i] = a[j]; a[j] = temp;
+    }
+
+    public static int[] randPerm (int n) {       //en effektiv versjon Programkode 1.1.8 e
+        Random r = new Random();                 // en randomgenerator
+        int[] a = new int [n];                   // en tabell med plass til n tall
+
+        Arrays.setAll(a, i -> i +1);             // Legger inn tallene 1-n i arrayet
+
+        for (int k = n - 1; k > 0; k--) {        // Løkke som går n-1 ganger
+            int i = r.nextInt(k+1);       // et tilfeldig tall fra 0-k
+            bytt(a, k, i);                      // Bytter om
+        }
+
+        return a;                               // Permutasjonen returneres
+    }
+
+    public static void main(String[] args) {
+        System.out.println(snitt(5));
+    }
+}
+
+//System.out.println(Arrays.toString(a));
+//System.out.println(Oblig1.ombyttinger(a));
+//System.out.println(Arrays.toString(a)); //for at arrayet blir skrevet ut
 
 Jeg mener at denne maks metoden er mindre efektiv enn de andre maks metodene på grunnlag av at her bytter metoden hvert tall,
 istedenfor å bare gå gjennom arrayet og finne det største tallet. 
