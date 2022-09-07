@@ -26,4 +26,12 @@ Linje 36: Hjelvariabel antall
 Linje 38: for løkke
 Linje 39-46: en if setning som øker med 1 hvis verdiene er gyldige. Deretter bytter vi på verdiene hvor det er nødvendig med hjelp av temp
 
+Spørsmål:
+Når blir det færrest ombytninger? Blir færrest ombytninger når tabellen er sortert
+Når blir det flest? Blir flest ombytninger når tabellen er usortert.
+Hvor mange blir det i gjennomsnitt? Finner gjennomsnittet ved å addere tallene i arrayet, deretter dele det på atnall tall. 
+
+Jeg mener at denne maks metoden er mindre efektiv enn de andre maks metodene på grunnlag av at her bytter metoden hvert tall,
+istedenfor å bare gå gjennom arrayet og finne det største tallet. 
+
 I oppgave 2
