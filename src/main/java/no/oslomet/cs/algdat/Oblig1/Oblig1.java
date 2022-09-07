@@ -3,18 +3,50 @@ package no.oslomet.cs.algdat.Oblig1;
 ////// Løsningsforslag Oblig 1 ////////////////////////
 
 import java.lang.UnsupportedOperationException;
+import java.util.NoSuchElementException;
 
 public class Oblig1 {
-    private Oblig1() {}
+    private Oblig1() {
+    }
 
     ///// Oppgave 1 //////////////////////////////////////
     public static int maks(int[] a) {
-        throw new UnsupportedOperationException();
+        int storstTall = 0;
+
+        if (a.length < 1) {
+            throw new NoSuchElementException("Ingen elemeter finnes i arrayet");
+        } else if (a.length == 1) {
+            storstTall = a[0];
+        }
+
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] < a[i - 1]) { //blir i-1 fordi vi skal se på indeksen til venstre
+                int temp = a[i]; //for å ikke miste verdien
+                a[i] = a[i - 1];
+                a[i - 1] = temp;
+            }
+            storstTall = a[i];
+        }
+        return storstTall;
     }
 
+
     public static int ombyttinger(int[] a) {
-        throw new UnsupportedOperationException();
+        int antall = 0;
+
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] < a[i - 1]) {
+                antall++;
+
+                int temp = a[i]; //for å ikke miste verdien
+                a[i] = a[i - 1];
+                a[i - 1] = temp;
+            }
+        }
+        return antall;
     }
+
+
 
     ///// Oppgave 2 //////////////////////////////////////
     public static int antallUlikeSortert(int[] a) {
