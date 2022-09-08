@@ -13,6 +13,7 @@ Suzane har løst oppgaver knyttet til 1 person
 # Oppgavebeskrivelse
 
 I oppgave 1 så gikk jeg frem følgende:
+
 Linje 14: Lager en string som skriver ut hvis det ikke er noe elementer i arrayet. 
 Linje 15: lager en integer med navn storstVerdi, setter verdien til 0
 Linje 17-21: Her setter jeg arrayet sin lengde til å være mindre enn 1 med en if setning, hvis det er tilfelle vil feilmelding skrives ut. 
@@ -20,26 +21,26 @@ Deretter en ny else if setning som setter arrayet sin lengde til å være == 1. 
 Lager en for løkke med gitte intervaller, deretter en ny if setning med integer temp som bytter på verdi elementene i arrayet. 
 Når elementene har gått seg gjennom for løkken og funnet største tall, setter vi det som lik a[i]
 Til slutt returnerer vi verdien. 
-
 Linje 35: metode ombyttinger
 Linje 36: Hjelvariabel antall
 Linje 38: for løkke
 Linje 39-46: en if setning som øker med 1 hvis verdiene er gyldige. Deretter bytter vi på verdiene hvor det er nødvendig med hjelp av temp
 
-Spørsmål:
+Spørsmål for oppgave 1:
 Når blir det færrest ombytninger? Blir færrest ombytninger når tabellen er sortert
 
 Når blir det flest? Blir flest ombytninger når tabellen er usortert.
 
 Hvor mange blir det i gjennomsnitt?
 
-KODE for å lage gjennomsnittsmetoden
-:
-package no.oslomet.cs.algdat.Oblig1;
-import java.util.Arrays;
-import java.util.Random;
+KODE for å lage gjennomsnittsmetoden:
+       
 
-public class MainTest {
+    public class MainTest {
+
+    package no.oslomet.cs.algdat.Oblig1;
+    import java.util.Arrays;
+    import java.util.Random;
 
     public static int snitt (int n) {
 
@@ -55,7 +56,7 @@ public class MainTest {
         return snitt;
     }
 
-    public static void bytt(int[] a, int i, int j) { // Programkode 1.1.8 d
+    public static void bytt(int[] a, int i, int j) { // Programkode 1.1.8 d hentet fra kompendium
         int temp = a[i]; a[i] = a[j]; a[j] = temp;
     }
 
@@ -76,13 +77,14 @@ public class MainTest {
     public static void main(String[] args) {
         System.out.println(snitt(5));
     }
-}
+    }
 
-//System.out.println(Arrays.toString(a));
-//System.out.println(Oblig1.ombyttinger(a));
-//System.out.println(Arrays.toString(a)); //for at arrayet blir skrevet ut
+    //System.out.println(Arrays.toString(a));
+    //System.out.println(Oblig1.ombyttinger(a));
+    //System.out.println(Arrays.toString(a)); //for at arrayet blir skrevet ut
 
 Jeg mener at denne maks metoden er mindre efektiv enn de andre maks metodene på grunnlag av at her bytter metoden hvert tall,
 istedenfor å bare gå gjennom arrayet og finne det største tallet. 
 
-I oppgave 2
+I oppgave 2 gikk jeg frem følgende:
+
