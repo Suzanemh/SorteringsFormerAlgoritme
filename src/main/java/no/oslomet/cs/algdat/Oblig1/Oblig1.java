@@ -58,7 +58,7 @@ public class Oblig1 {
 
         //for løkke som tar for seg hvis arrayet ikke er sortert
         for(int i = 1; i < a.length; i++){
-            if(a[i] < a[i]-1){
+            if(a[i] < a[i-1]){
                 throw new IllegalStateException("Arrayet er ikke sortert!");
             }
 
