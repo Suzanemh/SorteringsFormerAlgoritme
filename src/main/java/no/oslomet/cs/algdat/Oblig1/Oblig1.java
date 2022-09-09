@@ -50,10 +50,10 @@ public class Oblig1 {
 
     ///// Oppgave 2 //////////////////////////////////////
     public static int antallUlikeSortert(int[] a) {
-        int teller = 1;//teller som starter på 1
+        int tellerVerdi = 1;//teller som starter på 1
 
         if(a.length == 0){ //hvis tabellen er tom, har lengde 0
-            teller = 0;
+            tellerVerdi = 0;
         }
 
         //for løkke som tar for seg hvis arrayet ikke er sortert
@@ -62,13 +62,12 @@ public class Oblig1 {
                 throw new IllegalStateException("Arrayet er ikke sortert!");
             }
 
-            //hvis arrayet har like verdier
+            //skjekker om elementene er like eller ikke fra den forrige indeksen
             if(a[i-1] != a[i]){
-                teller++;
+                tellerVerdi++;
             }
         }
-        return teller;
-        //throw new UnsupportedOperationException();
+        return tellerVerdi;
     }
 
     ///// Oppgave 3 //////////////////////////////////////

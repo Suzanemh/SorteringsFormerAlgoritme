@@ -87,4 +87,9 @@ Jeg mener at denne maks metoden er mindre efektiv enn de andre maks metodene på
 istedenfor å bare gå gjennom arrayet og finne det største tallet. 
 
 I oppgave 2 gikk jeg frem følgende:
+Linje 53: setter en tellerverdi til integer med veriden 1
+Linje 55-57: en if setning som håndterer array som ikke er sortert. I tilfelle vil den skrive ut en melding i terminalen
+Linje 65-71: if setningen som skjekker om verdiene til indeksene ikke er like. Hvis det er tilfelle vil den
+returnene tellerVerdi integer. Eksempel er hvis jeg har arrayet 1 2 3 3 4 5. Vil arrayet ha 5 verdier, selvom 3 oppstår
+to ganger. 
 
