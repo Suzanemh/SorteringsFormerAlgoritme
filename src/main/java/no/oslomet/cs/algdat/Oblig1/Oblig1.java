@@ -80,16 +80,18 @@ public class Oblig1 {
        //for løkke som løper gjennom tabellen
         for(int i = 0; i < a.length; i++){
             boolean likTall = false;
-
+        //for løkke som igjen løper gjennom tabellen, skjekker om indeksene er like
             for(int j = 0; j < i; j++){
                 if(a[j] == a[i]){
                     likTall = true;
                 }
             }
+            //if statament som tar for seg hvis likTall ikke er lik
             if(!likTall){
                 tellerVerdi++;
             }
         }
+        //returnerer antall forskjellige verdier
         return tellerVerdi;
        }
 
