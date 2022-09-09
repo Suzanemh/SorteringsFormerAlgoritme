@@ -93,3 +93,10 @@ Linje 65-71: if setningen som skjekker om verdiene til indeksene ikke er like. H
 returnene tellerVerdi integer. Eksempel er hvis jeg har arrayet 1 2 3 3 4 5. Vil arrayet ha 5 verdier, selvom 3 oppstår
 to ganger. 
 
+I oppgave 3 gikk jeg frem følgende:
+Linje 77-79: If setning som håndterer om tabellen er tom
+Linje 80-88: Siden tabellen er usortert, lages det for løkker med boolean som skal si fra om tallet "likTall"
+er true eller false. Slik finner vi ut hvor mange forskjellege verdier tabellen har. 
+Linje 89-91: If setning som tar for seg hvis boolean likTall ikke er sann. Da vil tellerVerdi fortsette å øke. 
+Linje 95: returnerer tellerVerdi som forteller oss hvor mange forskjellige verider
+arrayet har. 
