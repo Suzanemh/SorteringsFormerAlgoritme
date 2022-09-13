@@ -119,6 +119,7 @@ public class Oblig1 {
 
             //siste element av arrayet blir lagt til start av array
             a[0] = siste;
+            //spør TA
         }
 
     }
