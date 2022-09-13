@@ -108,6 +108,18 @@ public class Oblig1 {
         for(int i = 0; i < n; i++){
             int j;
             char siste;
+            //lagrer siste element av arrays
+            siste = a[a.length-1];
+
+            for(j = a.length-1; j> 0; j--){
+
+                //skifter elementet av arrayet en om gangen
+                a[j] = a[j-1];
+            }
+
+            //siste element av arrayet blir lagt til start av array
+            a[0] = siste;
+        }
 
     }
 
