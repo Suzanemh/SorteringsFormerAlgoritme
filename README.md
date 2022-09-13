@@ -100,3 +100,6 @@ er true eller false. Slik finner vi ut hvor mange forskjellege verdier tabellen 
 Linje 89-91: If setning som tar for seg hvis boolean likTall ikke er sann. Da vil tellerVerdi fortsette å øke. 
 Linje 95: returnerer tellerVerdi som forteller oss hvor mange forskjellige verider
 arrayet har. 
+
+I oppgave 5 gikk jeg frem slik:
+

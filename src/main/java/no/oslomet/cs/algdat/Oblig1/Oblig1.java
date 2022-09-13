@@ -98,12 +98,17 @@ public class Oblig1 {
 
     ///// Oppgave 4 //////////////////////////////////////
     public static void delsortering(int[] a) {
-        throw new UnsupportedOperationException();
+
     }
 
     ///// Oppgave 5 //////////////////////////////////////
     public static void rotasjon(char[] a) {
-        throw new UnsupportedOperationException();
+        char n = 1;
+
+        for(int i = 0; i < n; i++){
+            int j;
+            char siste;
+
     }
 
     ///// Oppgave 6 //////////////////////////////////////
