@@ -103,3 +103,10 @@ arrayet har.
 
 I oppgave 5 gikk jeg frem slik:
 
+I oppgave 7 gikk jeg frem slik:
+Oppgaven her tar inn String parametere, derfor kan vi bruke StringBuilder for å operere med det.
+int resten er en variabel som fletter sammen det som er til overs helt mot slutten av flettingen.
+StringBuiler er en metode som ligner på det vi har lært i Java, det med String ut = " ;"
+Lager en for løkke, i for løkke starter vi å flette inn strengene frem til de har lik lengde.
+Deretter fletter vi resten ved bruk av variabelen resten. 
+
