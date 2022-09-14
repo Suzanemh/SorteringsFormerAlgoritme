@@ -134,22 +134,18 @@ public class Oblig1 {
     ///// Oppgave 7 //////////////////////////////////////
     /// 7a)
     public static String flett(String s, String t) {
-       String ut = "";
-       String b = s + t; //ny tabell som inneholder String s og t
+      int resten = Math.min(s.length(), t.length()); //når stringen er flettet, vil den ta resten, som e k her.
+      StringBuilder ut = new StringBuilder(); //denne ligner på String ut = "";
 
-        //definerer løkke variabler
-        int j= 0;
-        int k = 0;
+      for(int i = 0; i < resten ; i++){
+          ut.append(s.charAt(i)).append(t.charAt(i)); //her legges String inn i fra s og t til det er ferdig med lik lengde
+      }
 
-        for(int i = 0; i <  k ; i++){
-            ut+= s.charAt(i);
-            ut+= t.charAt(j);
-        }
-        return ut;
+      //koden under fletter sammen det som er til overs.
+      ut.append(s.substring(resten)).append(t.substring(resten));
 
-
-        //throw new UnsupportedOperationException();
-
+      //retur
+        return ut.toString();
     }
 
     /// 7b)
