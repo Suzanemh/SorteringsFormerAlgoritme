@@ -150,6 +150,23 @@ public class Oblig1 {
 
     /// 7b)
     public static String flett(String... s) {
+        int sLengde = s.length;
+        String ut = ""; //oppretter String ut
+
+        //oppretetr for løkker
+        for(int i = 0; i < s.length ; i++){
+            int jLengde = s[i].length(); //her finner vi ut hvor mange ord gikk indeks har
+            for(int j = 0; j < jLengde; j++){
+
+                //bygger ut strengen inni for løkke nummer 2, altså de som skal bli skrevet ut
+                ut += s[i].charAt(j);
+                if(i < sLengde){
+                    i++;
+                } else{
+                    break;
+                }
+            }
+        }
         throw new UnsupportedOperationException();
     }
 
