@@ -98,6 +98,8 @@ public class Oblig1 {
 
     ///// Oppgave 4 //////////////////////////////////////
     public static void delsortering(int[] a) {
+        //ta med partering
+        // 1.3.9.f
 
     }
 
@@ -132,7 +134,33 @@ public class Oblig1 {
     ///// Oppgave 7 //////////////////////////////////////
     /// 7a)
     public static String flett(String s, String t) {
+
+        String b = s + t; //ny tabell som inneholder String s og t
+
+        //definerer løkke variabler
+        int i = 0;
+        int j= 0;
+        int k = 0;
+
+        //while løkke
+        while(i < s.length() && j < t.length()){
+           // b[k] = s[i];
+            //k++;
+            //i++;
+            //koden i kommentar kan skrives slik
+            b[k++] = s[i++]; //først en verdi inn fra s
+            b[k++] = t[j++]; //verdi fra t
+        }
+
+       //ta med resten av flettingen
+        while (i< s.length()) b[k++] = s[i++];
+        while (j < t.length()) b[k++] = t[j++];
+
+        return b;
+
+
         throw new UnsupportedOperationException();
+
     }
 
     /// 7b)
