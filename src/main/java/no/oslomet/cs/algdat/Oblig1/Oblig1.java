@@ -152,22 +152,34 @@ public class Oblig1 {
     public static String flett(String... s) {
         int sLengde = s.length;
         String ut = ""; //oppretter String ut
+        int lengst = 0; //lengste ordet i arrayet
 
-        //oppretetr for løkker
-        for(int i = 0; i < s.length ; i++){
-            int jLengde = s[i].length(); //her finner vi ut hvor mange ord gikk indeks har
-            for(int j = 0; j < jLengde; j++){
-
-                //bygger ut strengen inni for løkke nummer 2, altså de som skal bli skrevet ut
-                ut += s[i].charAt(j);
-                if(i < sLengde){
-                    i++;
-                } else{
-                    break;
-                }
+        //for løkke som finner den lengste orden
+        for(int i = 0; i < sLengde ; i++){
+            int ordLengde =s[i].length();
+            if(ordLengde > lengst){
+                lengst = ordLengde;
             }
         }
-        throw new UnsupportedOperationException();
+
+        //oppretetr for løkker
+        for(int i = 0; i < sLengde ; i++){
+            int jLengde = s[i].length(); //her finner vi ut hvor mange ord gikk indeks har
+
+            //denne if setningen sjekker hvis lengden av s har en tom streng
+            if(jLengde == 0){
+                ut += "";
+            }
+            for(int j = 0; j < jLengde; j++){
+                //bygger ut strengen inni for løkke nummer 2, altså de som skal bli skrevet ut
+                ut += s[i].charAt(j);
+
+
+
+            }
+        }
+        return ut;
+       // throw new UnsupportedOperationException();
     }
 
     ///// Oppgave 8 //////////////////////////////////////
