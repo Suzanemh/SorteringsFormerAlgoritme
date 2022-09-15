@@ -3,6 +3,7 @@ package no.oslomet.cs.algdat.Oblig1;
 ////// Løsningsforslag Oblig 1 ////////////////////////
 
 import java.lang.UnsupportedOperationException;
+import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 public class Oblig1 {
@@ -99,30 +100,25 @@ public class Oblig1 {
     ///// Oppgave 4 //////////////////////////////////////
     public static void delsortering(int[] a) {
         //ta med partering
+       // 1.3.9.h
+
         // 1.3.9.f
+       // 1.3.9.a
+        //1.1.8.d
+
 
     }
 
     ///// Oppgave 5 //////////////////////////////////////
     public static void rotasjon(char[] a) {
-        char n = 1;
+        int enhet = 1;
+        int n = a.length;  if (n < 2) return;                 // tomt eller en verdi
 
-        for(int i = 0; i < n; i++){
-            int j;
-            char siste;
-            //lagrer siste element av arrays
-            siste = a[a.length-1];
 
-            for(j = a.length-1; j> 0; j--){
+        char[] b = Arrays.copyOfRange(a, n - enhet, n);           // hjelpetabell
+        for (int i = n - 1; i >= enhet; i--) a[i] = a[i - enhet];     // forskyver
+        System.arraycopy(b, 0, a, 0, enhet);                      // kopierer
 
-                //skifter elementet av arrayet en om gangen
-                a[j] = a[j-1];
-            }
-
-            //siste element av arrayet blir lagt til start av array
-            a[0] = siste;
-            //spør TA
-        }
 
     }
 
