@@ -111,13 +111,14 @@ public class Oblig1 {
 
     ///// Oppgave 5 //////////////////////////////////////
     public static void rotasjon(char[] a) {
-        int enhet = 1;
-        int n = a.length;  if (n < 2) return;                 // tomt eller en verdi
+        int enhet = 1;      //intialiserer en verdi, med verdi 1
+        int n = a.length;  // int har arrayet sin lengde
+        if (n < 2) return;         // skjekker at arrayet ikke er tomt, eller inneholder kun en verdi, derfor er den større enn 2
 
 
-        char[] b = Arrays.copyOfRange(a, n - enhet, n);           // hjelpetabell
-        for (int i = n - 1; i >= enhet; i--) a[i] = a[i - enhet];     // forskyver
-        System.arraycopy(b, 0, a, 0, enhet);                      // kopierer
+        char[] b = Arrays.copyOfRange(a, n - enhet, n);           // hjelpetabell som kopierer det som skal skyves ut av tabellen
+        for (int i = n - 1; i >= enhet; i--) a[i] = a[i - enhet];     // forskyver en og en verdi i indeksen en enhet om gangen.
+        System.arraycopy(b, 0, a, 0, enhet);             // kopierer tilbake det som ble skjevet ut, til starten av arrayet
 
 
     }
