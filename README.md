@@ -102,6 +102,12 @@ Linje 95: returnerer tellerVerdi som forteller oss hvor mange forskjellige verid
 arrayet har. 
 
 I oppgave 5 gikk jeg frem slik:
+intialiserer en verdi, med verdi 1
+intialiserer int med arrayets lengde
+skjekker at arrayet ikke er tomt, eller inneholder kun en verdi, derfor er den større enn 2
+hjelpetabell som kopierer det som skal skyves ut av tabellen
+forskyver en og en verdi i indeksen en enhet om gangen.
+kopierer tilbake det som ble skjevet ut, til starten av arrayet
 
 I oppgave 7 gikk jeg frem slik:
 Oppgaven her tar inn String parametere, derfor kan vi bruke StringBuilder for å operere med det.

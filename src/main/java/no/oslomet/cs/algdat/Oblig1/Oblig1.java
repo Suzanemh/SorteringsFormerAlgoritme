@@ -173,7 +173,7 @@ public class Oblig1 {
             }
         }
         return ut;
-       // throw new UnsupportedOperationException();
+
     }
 
     ///// Oppgave 8 //////////////////////////////////////
