@@ -150,7 +150,7 @@ public class Oblig1 {
 
     /// 7b)
     public static String flett(String... s) {
-        int sLengde = s.length;
+        int sLengde = s.length; //antall ord i arrayet
         String ut = ""; //oppretter String ut
         int lengst = 0; //lengste ordet i arrayet
 
@@ -162,20 +162,17 @@ public class Oblig1 {
             }
         }
 
-        //oppretetr for løkker
-        for(int i = 0; i < sLengde ; i++){
-            int jLengde = s[i].length(); //her finner vi ut hvor mange ord gikk indeks har
-
-            //denne if setningen sjekker hvis lengden av s har en tom streng
-            if(jLengde == 0){
-                ut += "";
-            }
-            for(int j = 0; j < jLengde; j++){
-                //bygger ut strengen inni for løkke nummer 2, altså de som skal bli skrevet ut
-                ut += s[i].charAt(j);
-
-
-
+        //denne if setningen sjekker hvis lengden av s har en tom streng
+        if(sLengde == 0){
+            ut += "";
+        }
+        //Oppretter for løkker
+        for(int i = 0; i < lengst ; i++){
+            for(int j = 0; j < sLengde; j++){
+                if(s[j].length() > i){
+                    //bygger ut strengen inni for løkke nummer 2, altså de som skal bli skrevet ut
+                    ut += s[j].charAt(i); //i teller bokstaver, j teller ord
+                }
             }
         }
         return ut;
