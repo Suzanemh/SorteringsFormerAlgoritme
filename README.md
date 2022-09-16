@@ -101,6 +101,16 @@ Linje 89-91: If setning som tar for seg hvis boolean likTall ikke er sann. Da vi
 Linje 95: returnerer tellerVerdi som forteller oss hvor mange forskjellige verider
 arrayet har. 
 
+I oppgave 4 gikk jeg frem slik:
+For det første, ble det hentet en del kildekode fra kompendium for å utføre en quick sort metode. Kildekodene som
+ble hentet står markert over hver metode brukt.
+For å få kjørt delsorteringsmetoden, startet jeg med å definere en hjelpevariabel som starter på 0. 
+Deretter kaller jeg på jvikksorteringsmetoden, med arrayet a inni. 
+Videre oppretter jeg en for løkke, i den har jeg en if setningn som tar for seg hvis tallet er et partall, og hvis ikke 
+vet vi at det er en oddetall.
+Hvis dete r tilfelle, vil oddetallet bli flyttet frem i arrayet. Denne koden ble skrevet med hjelp av variabelen temp. 
+Til slutt kaller jeg på kvikksortering, med parameterne (arrayet a, fra og til). 
+
 I oppgave 5 gikk jeg frem slik:
 intialiserer en verdi, med verdi 1
 intialiserer int med arrayets lengde

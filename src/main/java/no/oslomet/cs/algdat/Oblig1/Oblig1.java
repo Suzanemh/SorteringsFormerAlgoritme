@@ -181,7 +181,6 @@ public class Oblig1 {
                 a[i] = temp;
                 hjelpevariabel++; //tar neste tall
             }
-
         }
          kvikksortering(a,hjelpevariabel, a.length);
     }
