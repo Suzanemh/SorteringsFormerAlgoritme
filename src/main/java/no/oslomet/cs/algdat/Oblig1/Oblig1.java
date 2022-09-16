@@ -251,7 +251,7 @@ public class Oblig1 {
         return ut;
 
     }
-
+/*
     ///// Oppgave 8 //////////////////////////////////////
     public static int[] indekssortering(int[] a) {
         throw new UnsupportedOperationException();
@@ -270,5 +270,5 @@ public class Oblig1 {
     public static boolean inneholdt(String a, String b) {
         throw new UnsupportedOperationException();
     }
-
+*/
 }

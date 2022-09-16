@@ -7,8 +7,9 @@ s364759@oslomet.no
 
 # Arbeidsfordeling
 
-I oppgaven har vi hatt følgende arbeidsfordeling:
+I oppgaven har jeg hatt følgende arbeidsfordeling:
 Suzane har løst oppgaver knyttet til 1 person 
+Warnings i oppgaven er knyttet til at jeg ikke har løst oppgaver egent for mer enn 1 person i gruppen. 
 
 # Oppgavebeskrivelse
 
