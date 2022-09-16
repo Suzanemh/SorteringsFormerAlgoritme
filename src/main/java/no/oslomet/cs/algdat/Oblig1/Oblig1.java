@@ -1,6 +1,6 @@
 package no.oslomet.cs.algdat.Oblig1;
 
-////// Løsningsforslag Oblig 1 ////////////////////////
+
 
 import java.lang.UnsupportedOperationException;
 import java.util.Arrays;
@@ -185,8 +185,6 @@ public class Oblig1 {
          kvikksortering(a,hjelpevariabel, a.length);
     }
 
-
-
     ///// Oppgave 5 //////////////////////////////////////
     public static void rotasjon(char[] a) { //Kode inspirert fra kompendium 1.3.13b
         int enhet = 1;      //intialiserer en verdi, med verdi 1
@@ -273,4 +271,4 @@ public class Oblig1 {
         throw new UnsupportedOperationException();
     }
 
-}  // Oblig1
+}
