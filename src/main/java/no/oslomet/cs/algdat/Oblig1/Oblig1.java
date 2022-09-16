@@ -98,19 +98,98 @@ public class Oblig1 {
 
 
     ///// Oppgave 4 //////////////////////////////////////
-    public static void delsortering(int[] a) {
-        //ta med partering
-       // 1.3.9.h
+    //Ekstra kildekode for oppgave 4
 
-        // 1.3.9.f
-       // 1.3.9.a
-        //1.1.8.d
-
-
+    //1.1.8.d
+    public static void bytt(int[] a, int i, int j)
+    {
+        int temp = a[i]; a[i] = a[j]; a[j] = temp;
     }
 
+    //Partering 1.3.9.a
+    private static int parter0(int[] a, int v, int h, int skilleverdi)
+    {
+        while (true)                                  // stopper når v > h
+        {
+            while (v <= h && a[v] < skilleverdi) v++;   // h er stoppverdi for v
+            while (v <= h && a[h] >= skilleverdi) h--;  // v er stoppverdi for h
+
+            if (v < h) bytt(a,v++,h--);                 // bytter om a[v] og a[h]
+            else  return v;  // a[v] er nåden første som ikke er mindre enn skilleverdi
+        }
+    }
+
+    //1.3.9.f
+    private static int sParter0(int[] a, int v, int h, int indeks)
+    {
+        bytt(a, indeks, h);           // skilleverdi a[indeks] flyttes bakerst
+        int pos = parter0(a, v, h - 1, a[h]);  // partisjonerer a[v:h - 1]
+        bytt(a, pos, h);              // bytter for å få skilleverdien på rett plass
+        return pos;                   // returnerer posisjonen til skilleverdien
+    }
+
+
+    //fraTilKontroll kode 1.2.3.a
+    public static void fratilKontroll(int tablengde, int fra, int til)
+    {
+        if (fra < 0)                                  // fra er negativ
+            throw new ArrayIndexOutOfBoundsException
+                    ("fra(" + fra + ") er negativ!");
+
+        if (til > tablengde)                          // til er utenfor tabellen
+            throw new ArrayIndexOutOfBoundsException
+                    ("til(" + til + ") > tablengde(" + tablengde + ")");
+
+        if (fra > til)                                // fra er større enn til
+            throw new IllegalArgumentException
+                    ("fra(" + fra + ") > til(" + til + ") - illegalt intervall!");
+    }
+    //1.3.9.h
+    private static void kvikksortering0(int[] a, int v, int h)  // en privat metode
+    {
+        if (v >= h) return;  // a[v:h] er tomt eller har maks ett element
+        int k = sParter0(a, v, h, (v + h)/2);  // bruker midtverdien
+        kvikksortering0(a, v, k - 1);     // sorterer intervallet a[v:k-1]
+        kvikksortering0(a, k + 1, h);     // sorterer intervallet a[k+1:h]
+    }
+
+    public static void kvikksortering(int[] a, int fra, int til) // a[fra:til>
+    {
+        fratilKontroll(a.length, fra, til);  // sjekker når metoden er offentlig
+        kvikksortering0(a, fra, til - 1);  // v = fra, h = til - 1
+    }
+
+    public static void kvikksortering(int[] a)   // sorterer hele tabellen
+    {
+        kvikksortering0(a, 0, a.length - 1);
+    }
+
+    //kode for oppgave 4 selvskrevet
+    public static void delsortering(int[] a) {
+
+        //opretter hjelpevariabler
+        int hjelpevariabel = 0; //variabel som begynner fra 0, som senere kan påpeke indeksene samtnbytte plass
+        kvikksortering(a); //sortere alle elementer i arrayet
+
+        for(int i = 0; i < a.length ; i++){ //for løkke
+            if(a[i] %2 == 0){ //sjekker om tall er et partall
+            } else {  //hvis ikke er tallet et oddetall, tallet skal flyttes foran i arrayet
+               //linjene under ligner på bytt metoden
+
+                int temp = a[hjelpevariabel];
+                a[hjelpevariabel] = a[i];
+                a[i] = temp;
+                hjelpevariabel++; //tar neste tall
+            }
+
+        }
+         kvikksortering(a,hjelpevariabel, a.length);
+    }
+
+
+
     ///// Oppgave 5 //////////////////////////////////////
-    public static void rotasjon(char[] a) {
+    public static void rotasjon(char[] a) { //Kode inspirert fra kompendium 1.3.13b
         int enhet = 1;      //intialiserer en verdi, med verdi 1
         int n = a.length;  // int har arrayet sin lengde
         if (n < 2) return;         // skjekker at arrayet ikke er tomt, eller inneholder kun en verdi, derfor er den større enn 2
