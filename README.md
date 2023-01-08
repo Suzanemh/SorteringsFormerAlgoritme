@@ -1,4 +1,6 @@
 # Obligatorisk oppgave 1 i Algoritmer og Datastrukturer
+Obligen tar for seg ulike måter å sortere en tabell på. Se detaljert oppgavebeskrivelse under i READMe
+
 
 Denne oppgaven er en innlevering i Algoritmer og Datastrukturer. 
 Suzane Hamze
